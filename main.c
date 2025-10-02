@@ -3,34 +3,24 @@
 
 int main(int argc, char *argv[])
 {
-  int a;
-  char x;
-  int b;
-  int result;
+  int x;
+  int answer = 59;
+  int i=0; //try times
   
-  printf("enter the calculation : ");
-  scanf("%d %c %d", &a, &x, &b);
-  
-  switch(x) {
-            case '+':
-                 result = a + b;
-                 break;
-            case '-':
-                 result = a - b;
-                 break;
-            case '*':
-                 result = a * b;
-                 break;
-            case '/':
-                 result = a / b;
-                 break;
-            default:
-                    printf("it's unvalid");
-                    }
-                    
-  printf("the result is %d\n", result);
-  
-       
+  do {
+      printf("Guess a number : ");
+      scanf("%d", &x);
+      i++;
+      
+      if (x < answer)
+            printf("low!\n");
+      else if (x > answer)
+           printf("high!\n");
+           
+      } while (x != answer);
+      
+  printf("congratulation! trials: %d\n", i);
+ 
   system("PAUSE");	
   return 0;
 }
