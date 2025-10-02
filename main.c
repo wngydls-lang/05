@@ -3,17 +3,32 @@
 
 int main(int argc, char *argv[])
 {
-  int last;
-  int sum = 0;
-  int i;
+  int a;
+  char x;
+  int b;
+  int result;
   
-  printf("input an number : ");
-  scanf("%d", &last);
+  printf("enter the calculation : ");
+  scanf("%d %c %d", &a, &x, &b);
   
-  for(i=1; i<=last; i++) {
-           sum = sum + i;
-           }
-  printf("the result is %d\n", sum);
+  switch(x) {
+            case '+':
+                 result = a + b;
+                 break;
+            case '-':
+                 result = a - b;
+                 break;
+            case '*':
+                 result = a * b;
+                 break;
+            case '/':
+                 result = a / b;
+                 break;
+            default:
+                    printf("it's unvalid");
+                    }
+                    
+  printf("the result is %d\n", result);
   
        
   system("PAUSE");	
